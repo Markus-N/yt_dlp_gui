@@ -1,0 +1,91 @@
+{
+    "icon": "icons/yt_dl_gui.png",
+    "video_formats": [
+        [
+            "720/1440",
+            "(bestvideo[height<=720][width>720]/bestvideo[height<=1440])+bestaudio/best"
+        ],
+        [
+            "720",
+            "bestvideo[height<=720]+bestaudio/best"
+        ],
+        [
+            "1080",
+            "bestvideo[height<=1080]+bestaudio/best"
+        ],
+        [
+            "1440",
+            "bestvideo[height<=1440]+bestaudio/best"
+        ],
+        [
+            "NO LIMIT",
+            "bestvideo+bestaudio/best"
+        ]
+    ],
+    "target_dirs": [
+        "Videos/YouTube_Downloads/videos",
+        "Videos/YouTube_Downloads/shorts"
+    ],
+    "temp_dir": "ytdl_temp",
+    "download_archive": "downloaded.list",
+    "yt_dl_params": {
+        "restrictfilenames": true,
+        "break_on_existing": true,
+        "cachedir": false,
+        "geo_bypass": true,
+        "merge_output_format": "mkv",
+        "updatetime": true,
+        "writeautomaticsub": true,
+        "writedescription": true,
+        "writesubtitles": true,
+        "subtitleslangs": [
+            "de",
+            "en",
+            "es",
+            "fr",
+            "it"
+        ],
+        "writethumbnail": true,
+        "youtube_include_dash_manifest": true,
+        "youtube_include_hls_manifest": true,
+        "format": null,
+        "paths": null,
+        "outtmpl": {
+            "default": "%(upload_date)s %(uploader_id)s - %(title)s  %(resolution)s %(id)s.%(ext)s",
+            "chapter": "%(title)s-%(section_number)03d-%(section_title)s-[%(id)s].%(ext)s"
+        },
+        "postprocessor_args": {},
+        "postprocessors": [
+            {
+                "key": "FFmpegThumbnailsConvertor",
+                "format": "jpg",
+                "when": "before_dl"
+            },
+            {
+                "key": "FFmpegMetadata",
+                "add_chapters": true,
+                "add_infojson": null,
+                "add_metadata": false
+            },
+            {
+                "key": "EmbedThumbnail",
+                "already_have_thumbnail": true
+            },
+            {
+                "key": "FFmpegConcat",
+                "only_multi_video": true,
+                "when": "playlist"
+            }
+        ]
+    },
+    "postprocessing": {
+        "underscores_to_spaces": true,
+        "remove_at_sign": true,
+        "add_newlines_to_description": true,
+        "rename_description": true,
+        "rename_description_suffix": ".txt",
+        "delete_empty_description": true,
+        "add_tumb": true,
+        "subtitles_dots_to_underscores": true
+    }
+}
