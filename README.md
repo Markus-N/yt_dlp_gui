@@ -27,6 +27,11 @@ However, if you're a developer and really want these features, feel free to fork
 
 This tool has been developed and tested on Linux, other operating systems could need some minor adaptations for handling absolute/relative file names and line endings.
 
+# Known bugs
+See "Issues".  
+If you don't find your problem there, please also check closed issues before opening a new issue.
+Maybe you find a solution there.
+
 # Installation
 * Copy these files to a directory (not necessarily a new one):
   * yt_dl_gui.py
@@ -41,7 +46,7 @@ This tool has been developed and tested on Linux, other operating systems could 
 * yt-dlp installed in an [importable](https://docs.python.org/3/reference/import.html) way  
 * tkinterdnd2
 * ffmpeg
-* A unicode font that supports the status emojis, e.g. noto-fonts-emoji and noto-fonts-extra
+* A set of unicode fonts that support the status emojis, e.g. noto-fonts, noto-fonts-extra, and noto-fonts-emoji
 
 ## Configuration
 All configuration is done in the file yt_dl_gui.json.
