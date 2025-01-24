@@ -293,7 +293,7 @@ class YtDlGUI:
         dir_buttons_frame = Frame(master=self.parent)
         self.add_dir_button = Button(master=dir_buttons_frame,
                                      text=SYMBOL_HEAVY_PLUS,
-                                     font='Aral 10 bold',
+                                     font='Arial 10 bold',
                                      foreground='green',
                                      padx=3,
                                      pady=1,
@@ -302,7 +302,7 @@ class YtDlGUI:
         self.add_dir_button.pack(side='left')
         self.remove_dir_button = Button(master=dir_buttons_frame,
                                         text=SYMBOL_HEAVY_MINUS,
-                                        font='Aral 10 bold',
+                                        font='Arial 10 bold',
                                         foreground='red',
                                         padx=3,
                                         pady=1,
@@ -311,7 +311,7 @@ class YtDlGUI:
         self.remove_dir_button.pack(side='left')
         self.sort_dirs_button = Button(master=dir_buttons_frame,
                                        text=SYMBOL_ARROWS_UP_DOWN,
-                                       font='Aral 10 bold',
+                                       font='Arial 10 bold',
                                        padx=3,
                                        pady=1,
                                        command=self.sort_download_dirs)
@@ -319,7 +319,7 @@ class YtDlGUI:
         self.sort_dirs_button.pack(side='left')
         self.save_dirs_button = Button(master=dir_buttons_frame,
                                        text=SYMBOL_FLOPPY,
-                                       font='Aral 10 bold',
+                                       font='Arial 10 bold',
                                        padx=3,
                                        pady=1,
                                        command=self.save_config)
@@ -341,7 +341,7 @@ class YtDlGUI:
 
         add_icon_label = Label(master=dl_buttons_frame,
                                text=SYMBOL_DOWN_ARROW,
-                               font='Aral 18 bold',
+                               font='Arial 18 bold',
                                foreground='green')
         add_icon_label.pack(side='left', padx=(40, 2))
 
@@ -552,14 +552,14 @@ class YtDlGUI:
         buttons_frame: Frame = Frame(self.dialog_window)
         ok_button: Button = Button(master=buttons_frame,
                                    text=SYMBOL_OK,
-                                   font='Aral 10 bold',
+                                   font='Arial 10 bold',
                                    foreground='green',
                                    padx=3,
                                    pady=1,
                                    command=self.sort_download_dirs_ok)
         cancel_button: Button = Button(master=buttons_frame,
                                        text=SYMBOL_CANCEL,
-                                       font='Aral 10 bold',
+                                       font='Arial 10 bold',
                                        foreground='red',
                                        padx=3,
                                        pady=1,
